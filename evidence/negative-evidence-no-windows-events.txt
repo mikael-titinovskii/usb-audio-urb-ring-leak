@@ -1,0 +1,28 @@
+Negative evidence: the fault produced no Windows-side event
+
+Two capture windows recorded the driver's queue events. In both, the Windows audio provider log
+and the PnP log produced no events at all - including the window in which the ring lost a
+descriptor and audible crackle occurred. The zero-length outputs are stated here in text because
+an empty file carries no information in a repository.
+
+  Capture 1 - healthy ring, 8 minutes
+    window      : 2026-10-10 14:22:16 - 14:30:19  (local time, UTC+03:00)
+    ring state  : 10 of 10 output descriptors throughout (see evidence/post-reset-healthy-aggregate.txt)
+    audio log   : 0 events
+    pnp log     : 0 events
+
+  Capture 2 - fault occurs inside the window, 20 minutes
+    window      : 2026-10-10 14:30:54 - 14:50:54  (local time, UTC+03:00)
+    ring state  : 10 -> 9 output descriptors at 14:47:53 (see evidence/pool-timeline-onset-capture.txt)
+    audio log   : 0 events
+    pnp log     : 0 events
+
+Observations common to both windows
+  - audiodg.exe process identity unchanged throughout: no audio-host restart
+  - interface PnP device status "OK" at every 5-second sample (evidence/onset-capture-samples.csv)
+  - no service stop/start, no driver load event, no device re-enumeration
+  - in the collapsed state, every transfer still reports status 0x00000000 while returning
+    zero bytes (evidence/collapsed-state-aggregate.txt, evidence/collapsed-state-events.csv), which
+    is why no error is surfaced at any level
+
+Corresponding capture logs: evidence/onset-capture-run-log.txt, evidence/post-reset-run-log.txt.

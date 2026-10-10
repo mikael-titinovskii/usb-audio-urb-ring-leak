@@ -1,0 +1,88 @@
+Latency and paging measurements, taken on the affected machine
+================================================================
+
+What this is
+------------
+This is not a report produced by LatencyMon. LatencyMon is not installed on this machine, so
+instead the same underlying sources were measured directly: the Windows kernel event tracing for
+DPC/ISR execution times with per-driver attribution, and the Windows performance counters for
+paging.
+
+The DPC/ISR figures below were taken while the fault was active - audible crackle, with the audio
+engine logging missed deadlines. The paging figures were sampled afterwards during normal use of
+the machine. Nothing here was recorded on an idle or freshly booted system.
+
+System
+------
+  Operating system  : Windows 11, 10.0.26200, 64-bit
+  Processor         : AMD Ryzen 7 7800X3D, 8 cores / 16 logical processors
+  Memory            : 31.2 GiB total, 5.9 GiB available at sampling time
+  Audio interface   : USB Audio Class 2.0, VID:PID 1235:8218 (Scarlett Solo 4th Gen)
+  Drivers           : Focusrite Audio Drivers 4.150.0.432 (focusriteusb.sys, focusriteusbaudio.sys,
+                      focusriteusbswroot.sys), Focusrite Control 2 1.1108.0.0, firmware 2417
+  Stream settings   : 48 kHz, 128-sample buffer, Safe Mode on, USB Internal clock (synced)
+
+Highest DPC/ISR execution time per driver
+-----------------------------------------
+Source: elevated kernel ETW trace, 18 September 2026, taken while the crackle was audible and
+missed-deadline reports were being logged. 999,611 DPC and ISR executions were decoded with zero
+lost events; the durations were cross-checked against the raw trace header before use.
+
+  Driver module                     Type      Maximum observed
+  ------------------------------    ------    ----------------
+  Wdf01000.sys (WDF framework)      DPC       0.4606 ms
+  dxgkrnl.sys   (graphics kernel)   ISR       0.4370 ms
+  amdkmdag.sys  (AMD graphics)      DPC       0.3002 ms
+  ntoskrnl.exe                      DPC       0.2878 ms
+  winhvr.sys                        DPC       0.2661 ms
+  portcls.sys   (audio class)       DPC       0.0503 ms
+  ndis.sys      (network)           DPC       0.0369 ms
+
+  All 999,611 decoded DPC/ISR executions were shorter than 0.5 ms.
+
+Note on Wdf01000.sys: it is a framework wrapper, so its module name alone does not identify the
+underlying device driver. The trace did not capture driver callback stacks and therefore cannot
+attribute that wrapper's work to any specific device.
+
+Audio engine thread
+-------------------
+  Worst ready-to-run delay for the audio engine thread : 0.2650 ms
+  Worst audio processing pass                          : 0.3142 ms against a stated 4 ms budget
+  (no processing pass exceeded the budget; 99th percentile ready-to-run delay 0.0226 ms)
+
+Paging
+------
+Source: Windows performance counters, sampled 13 October 2026, machine in normal use.
+
+  Hard fault disk reads (Page Reads/sec)  : 0
+  Pages input/sec                         : 0
+  Memory available                        : 5,936 MB
+
+  Highest page fault rates per process (soft faults, which are normal):
+      Spotify#6      4,552 /s
+      "orr"          3,000 /s
+      MsMpEng        2,758 /s
+      everything else below 500 /s
+
+  No hard paging was occurring; the disk-backed page fault rate was zero.
+
+For completeness: one other trace
+--------------------------------
+A separate kernel trace taken on 21 September 2026, during a heavy background disk search, did
+record storport.sys DPCs up to 6.8389 ms. That trace was not taken during a fault, and four
+bounded read-only disk-load tests performed afterwards did not reproduce the playback fault at
+all. The spike is on record, but it is not the trigger.
+
+Verdict
+-------
+No driver in the audio path shows DPC or ISR execution time large enough to cause this, the audio
+engine thread is not being starved of CPU, and there is no hard paging. This is not a latency,
+scheduling or memory-pressure problem.
+
+The failure is visible instead in the driver's own trace output: a completed playback request is
+never resubmitted, so the ring of ten requests becomes nine, then six, then one; with one request
+left the schedule runs about 185 frames behind the USB frame counter and every transfer completes
+reporting success while transferring zero bytes of audio.
+
+Raw traces, including the one the DPC/ISR figures come from, are available on request; three of
+them are published in the release linked from the repository.

@@ -1,0 +1,21 @@
+Start=2026-09-28T10:57:20.5945858+03:00
+End=2026-09-28T10:58:05.6727159+03:00
+Decoder=assembly-derived WdmAudioClient field layout for 4.150.0.432, not vendor TMF
+Matching SwRoot PDB identity in ETL=True
+Events lost=0
+Decoded buffer events=32289
+Event counts=0x14:17265, 0x16:15024, 0x17:15024, 0x18:15024
+
+Client=0xffff86833a0d8db0 records=32289
+Queued min=4416 max=5527 negative=0 zero=0
+Read range=0..9552 write range=0..9598
+Producer events=17265 total_frames=2163650 chunk_counts=144:4880, 96:1829, 48:1033, 480:1017, 192:638, 44:369, 45:324, 95:208, 46:194, 52:180, 51:174, 143:161 max_gap_ms=11.329800 at_ms=29358.300400
+Consumer events=15024 total_frames=2163456 chunk_counts=144:15024 max_gap_ms=3.687200 at_ms=36107.164300
+Observed positive wrap corrections=9600:451 candidate_capacity_gcd=9600
+Cumulative counter mismatches=0 interleaved queue-accounting mismatches=0
+Pointer-minus-queued modular offsets (frames:count)=336:32289; offset changes=0; queued>=capacity=0
+A constant nonzero offset does not establish an error in this interval; initial pointer/count alignment and earlier history were not captured.
+
+Other errors/observations=0
+This is one interval, not proof of long-term stability or absence of firmware/USB payload faults.
+
