@@ -1,0 +1,26 @@
+14:30:54.505  run=Watch-20261010-1432 seconds=1200
+The command completed successfully.
+14:30:54.532  logman create exit=0 session=WatchTrace-e74b09d3
+14:31:59.373  t+  60s audiodg=20228 cpu=14.28125
+14:33:04.374  t+ 120s audiodg=20228 cpu=14.734375
+14:34:09.367  t+ 180s audiodg=20228 cpu=15.3125
+14:35:14.331  t+ 240s audiodg=20228 cpu=15.9375
+14:36:19.293  t+ 300s audiodg=20228 cpu=16.375
+14:37:24.329  t+ 360s audiodg=20228 cpu=16.953125
+14:38:29.383  t+ 420s audiodg=20228 cpu=17.4375
+14:39:34.380  t+ 480s audiodg=20228 cpu=18.0625
+14:40:39.406  t+ 540s audiodg=20228 cpu=18.671875
+14:41:44.051  t+ 600s audiodg=20228 cpu=19.1875
+14:42:48.515  t+ 660s audiodg=20228 cpu=19.390625
+14:43:53.087  t+ 720s audiodg=20228 cpu=19.8125
+14:44:57.706  t+ 780s audiodg=20228 cpu=20.171875
+14:46:02.288  t+ 840s audiodg=20228 cpu=20.4375
+14:47:07.089  t+ 900s audiodg=20228 cpu=20.8125
+14:48:11.883  t+ 960s audiodg=20228 cpu=21.234375
+14:49:16.424  t+1020s audiodg=20228 cpu=21.71875
+14:50:20.944  t+1080s audiodg=20228 cpu=22.1875
+The command completed successfully.
+14:50:58.656  logman stop exit=0
+14:50:58.774  analyzing
+14:51:06.208  analysis done
+14:51:06.209  DONE

@@ -1,0 +1,7 @@
+Source=C:\Users\<user>\AppData\Local\FocusriteDiagnostics\Device-loopback-20260928-110612-playing.wav
+format=Float32 channels=2 rate=48000 frames=383520 nonzero_samples=767040
+RMS_dBFS=-26.592363 peak_dBFS=-11.691089
+
+Source=C:\Users\<user>\AppData\Local\FocusriteDiagnostics\Device-loopback-20260928-110612-scarlett-loopback.wav
+format=PCM32 channels=2 rate=48000 frames=384768 nonzero_samples=0
+RMS_dBFS=-Infinity peak_dBFS=-Infinity
