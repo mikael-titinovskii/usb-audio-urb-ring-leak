@@ -1,0 +1,77 @@
+﻿Environment record
+Captured: 2026-10-10 15:18:46 local time (UTC+03:00)
+Method: read-only queries (PnP, registry, file metadata). No capture, no device restart, no settings change.
+
+== Operating system ==
+Version   : 10.0.26200  (build 26200)
+Arch      : 64-bit
+
+== Interface ==
+InstanceId : USB\VID_1235&PID_8218\<serial>
+HardwareId : USB\VID_1235&PID_8218&REV_0971
+HardwareId : USB\VID_1235&PID_8218
+Interface class evidence (class/subclass/protocol as reported by Windows):
+  USB\VID_1235&PID_8218&MI_00\7&21D50302&0&0000  ->  USB\COMPAT_VID_1235&Class_01&SubClass_00&Prot_20
+  USB\VID_1235&PID_8218&MI_00\7&21D50302&0&0000  ->  USB\COMPAT_VID_1235&Class_01&SubClass_00
+  USB\VID_1235&PID_8218&MI_00\7&21D50302&0&0000  ->  USB\COMPAT_VID_1235&Class_01
+  USB\VID_1235&PID_8218&MI_00\7&21D50302&0&0000  ->  USB\Class_01&SubClass_00&Prot_20
+  USB\VID_1235&PID_8218&MI_00\7&21D50302&0&0000  ->  USB\Class_01&SubClass_00
+  USB\VID_1235&PID_8218&MI_00\7&21D50302&0&0000  ->  USB\Class_01
+  USB\VID_1235&PID_8218&MI_03\7&21D50302&0&0003  ->  USB\COMPAT_VID_1235&Class_ff&SubClass_01&Prot_20
+  USB\VID_1235&PID_8218&MI_03\7&21D50302&0&0003  ->  USB\COMPAT_VID_1235&Class_ff&SubClass_01
+  USB\VID_1235&PID_8218&MI_03\7&21D50302&0&0003  ->  USB\COMPAT_VID_1235&Class_ff
+  USB\VID_1235&PID_8218&MI_03\7&21D50302&0&0003  ->  USB\Class_ff&SubClass_01&Prot_20
+  USB\VID_1235&PID_8218&MI_03\7&21D50302&0&0003  ->  USB\Class_ff&SubClass_01
+  USB\VID_1235&PID_8218&MI_03\7&21D50302&0&0003  ->  USB\Class_ff
+  USB\VID_1235&PID_8218&MI_04\7&21D50302&0&0004  ->  USB\COMPAT_VID_1235&Class_08&SubClass_06&Prot_50
+  USB\VID_1235&PID_8218&MI_04\7&21D50302&0&0004  ->  USB\COMPAT_VID_1235&Class_08&SubClass_06
+  USB\VID_1235&PID_8218&MI_04\7&21D50302&0&0004  ->  USB\COMPAT_VID_1235&Class_08
+  USB\VID_1235&PID_8218&MI_04\7&21D50302&0&0004  ->  USB\Class_08&SubClass_06&Prot_50
+  USB\VID_1235&PID_8218&MI_04\7&21D50302&0&0004  ->  USB\Class_08&SubClass_06
+  USB\VID_1235&PID_8218&MI_04\7&21D50302&0&0004  ->  USB\Class_08
+
+== Transport path (device -> controller) ==
+  [0] USB\VID_1235&PID_8218\<serial>   USB audio interface (composite device)
+  [1] USB\ROOT_HUB30\5&b222599&0&0   USB Root Hub (USB 3.0)
+  [2] PCI\VEN_1022&DEV_15B7&SUBSYS_88771043&REV_00\4&1ebe6a9c&0&0441   AMD USB 3.10 eXtensible Host Controller - 1.20
+  [3] PCI\VEN_1022&DEV_14DD&SUBSYS_88771043&REV_00\3&11583659&0&41   PCI Express Root Port
+  [4] ACPI\PNP0A08\0   PCI Express Root Complex
+  [5] ACPI_HAL\PNP0C08\0   Microsoft ACPI-Compliant System
+  The root hub sits directly on the CPU-attached xHCI controller, not on an external hub.
+
+== Driver modules (version and SHA256) ==
+  FocusriteUsb.sys  version=4.150.0.432  sha256=498F4644C737C829FDD8853F9BE79A4FBF65C812B623818DF611587779135B80
+  FocusriteUsbAudio.sys  version=4.150.0.432  sha256=DFED3FECEAE93C0940998E27462DBFD44B93EDF6641F37B7E94FD873DF6488DA
+  FocusriteUsbSwRoot.sys  version=4.150.0.432  sha256=59ECC4D030E5DEC83C1D948E807BEBA0006FA4E833A631B68804B8782EC42C76
+  FocusriteUsbAsio.dll  version=4.150.0.432  sha256=4EEA43E764E4DC4BA6B53C557B32C22FBFF5185DE15F97E67E745B11B5B02938
+
+== Per-device power management flags (registry: Device Parameters) ==
+  USB\VID_1235&PID_8218\<serial>
+    SelectiveSuspendEnabled = 0   (0 = disabled)
+    AllowIdleIrpInD3 = 0   (0 = disabled)
+    EnhancedPowerManagementEnabled = 0   (0 = disabled)
+    DeviceSelectiveSuspended = 0   (0 = disabled)
+  USB\ROOT_HUB30\5&b222599&0&0
+    SelectiveSuspendEnabled = 0   (0 = disabled)
+    AllowIdleIrpInD3 = 0   (0 = disabled)
+    EnhancedPowerManagementEnabled = 0   (0 = disabled)
+    DeviceSelectiveSuspended = 0   (0 = disabled)
+  MSPower_DeviceEnable for root hubs (False = power management not permitted):
+    USB\ROOT_HUB30\5&2e6429fc&0&0_0 = False
+    USB\ROOT_HUB30\1&2d12bed1&0&0_0 = True
+    USB\ROOT_HUB30\5&239a9e6d&0&0_0 = False
+    USB\ROOT_HUB30\5&b222599&0&0_0 = False
+    USB\ROOT_HUB30\7&32fcecfc&0&0_0 = False
+
+== Active power scheme, AC values ==
+  USB selective suspend (AC) = 0x00000000   (0 = disabled)
+  PCIe ASPM             (AC) = 0x00000000   (0 = disabled)
+
+== Stream settings in use ==
+  48 kHz sample rate, 128-sample buffer, Safe Mode enabled, clock source USB Internal (synced),
+  4 record / 2 playback channels. Reported by the interface control application at the time of the
+  captures. That application's settings screenshot is not retained in this repository, and no
+  Windows endpoint-format value is asserted in this record.
+
+Note: the concrete device serial is redacted as <serial>. VID:PID, driver module names and hashes
+are retained deliberately as the technical identifiers needed to locate the defect.

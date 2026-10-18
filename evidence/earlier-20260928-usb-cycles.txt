@@ -1,0 +1,27 @@
+Start=2026-09-28T11:05:13.6124273+03:00
+End=2026-09-28T11:05:28.7853876+03:00
+Events lost=0 decode failures=0
+Scarlett transfer events=20208
+
+IN completions=5052 unique_URBs=10 unique_buffers=10 bad_status=0 packet_errors=0
+Bytes=2304:5052 packets=24:5052
+URB=0xffff868337016640 buffer=0xffffa87d68200000 completions=505 reuse_ms=29.7321..30.2673 frame_deltas=30:504
+URB=0xffff868336ad25c0 buffer=0xffffa87d68202580 completions=506 reuse_ms=29.7824..30.0654 frame_deltas=30:505
+URB=0xffff8683360acd90 buffer=0xffffa87d68204b00 completions=506 reuse_ms=29.8268..30.1259 frame_deltas=30:505
+URB=0xffff868330404d90 buffer=0xffffa87d68207080 completions=505 reuse_ms=29.7368..30.2703 frame_deltas=30:504
+URB=0xffff868336a7cd90 buffer=0xffffa87d68209600 completions=505 reuse_ms=29.9074..30.0934 frame_deltas=30:504
+URB=0xffff8682e6b65d90 buffer=0xffffa87d6820bb80 completions=505 reuse_ms=29.7073..30.2935 frame_deltas=30:504
+URB=0xffff8683357ed390 buffer=0xffffa87d6820e100 completions=505 reuse_ms=29.7720..30.1888 frame_deltas=30:504
+URB=0xffff86833878bd90 buffer=0xffffa87d68210680 completions=505 reuse_ms=29.8307..30.1101 frame_deltas=30:504
+URB=0xffff868330405d90 buffer=0xffffa87d68212c00 completions=505 reuse_ms=29.7397..30.2564 frame_deltas=30:504
+URB=0xffff868336b9cd90 buffer=0xffffa87d68215180 completions=505 reuse_ms=29.9480..30.0563 frame_deltas=30:504
+First completion buffer-index sequence=1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+Smallest exact completed-buffer identity period=10 transfers
+
+OUT completions=5052 unique_URBs=1 unique_buffers=1 bad_status=0 packet_errors=0
+Bytes=0:5052 packets=24:5052
+URB=0xffff8683345e3dd0 buffer=0xffffa87d67c02580 completions=5052 reuse_ms=2.6552..3.3478 frame_deltas=3:5051
+First completion buffer-index sequence=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Smallest exact completed-buffer identity period=1 transfers
+USB status/addresses/timing only; no PCM payload was captured.
+

@@ -1,0 +1,69 @@
+rows=2408193
+
+=== OUT (playback) per second ===
+  t=   0s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=  30s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=  60s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=  90s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 120s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 150s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 180s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 210s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 240s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 270s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 300s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 330s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 360s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 390s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 420s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 450s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 480s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 510s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 540s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 570s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 600s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 630s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 660s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 690s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 720s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 750s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 780s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 810s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 840s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 870s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 900s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 930s slots=10 submits=333 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 960s slots=10 submits=334 margin=28..28 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  t= 990s slots=10 submits=334 margin=25..25 indices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  >> CHANGE at 1019s: slots 10 -> 9  indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1019s slots= 9 submits=333 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1020s slots= 9 submits=333 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1050s slots= 9 submits=333 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1080s slots= 9 submits=333 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1110s slots= 9 submits=334 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1140s slots= 9 submits=334 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1170s slots= 9 submits=333 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+  t=1200s slots= 9 submits=333 margin=25..25 indices=[0, 2, 3, 4, 5, 6, 7, 8, 9]
+
+=== IN (record) per second (first/last/change only) ===
+  t=   0s slots=10 submits=333 margin=28..28
+  t=  60s slots=10 submits=334 margin=28..28
+  t= 120s slots=10 submits=333 margin=28..28
+  t= 180s slots=10 submits=334 margin=28..28
+  t= 240s slots=10 submits=333 margin=28..28
+  t= 300s slots=10 submits=333 margin=28..28
+  t= 360s slots=10 submits=334 margin=28..28
+  t= 420s slots=10 submits=333 margin=28..28
+  t= 480s slots=10 submits=333 margin=28..28
+  t= 540s slots=10 submits=333 margin=28..28
+  t= 600s slots=10 submits=333 margin=28..28
+  t= 660s slots=10 submits=334 margin=28..28
+  t= 720s slots=10 submits=333 margin=28..28
+  t= 780s slots=10 submits=333 margin=28..28
+  t= 840s slots=10 submits=334 margin=28..28
+  t= 900s slots=10 submits=333 margin=28..28
+  t= 960s slots=10 submits=334 margin=28..28
+  t=1020s slots=10 submits=333 margin=28..28
+  t=1080s slots=10 submits=333 margin=28..28
+  t=1140s slots=10 submits=334 margin=28..28
+  t=1200s slots=10 submits=333 margin=28..28

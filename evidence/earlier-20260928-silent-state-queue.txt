@@ -1,0 +1,129 @@
+Start=2026-09-28T11:05:13.5703729+03:00
+End=2026-09-28T11:06:13.7067668+03:00
+Assembly-derived field layout, not vendor TMF; expected PDB identity matched=True
+Events lost=0 selected rows=120264
+Selected event coverage_ms=1.223500..60131.695300 declared_session_ms=60136.393900
+IN completions=20044 index_counts=0:2004, 1:2004, 2:2004, 3:2004, 4:2004, 5:2004, 6:2005, 7:2005, 8:2005, 9:2005
+IN submissions=20044 index_counts=0:2004, 1:2004, 2:2004, 3:2004, 4:2004, 5:2004, 6:2005, 7:2005, 8:2005, 9:2005
+IN failed_completion_statuses=0 failed_submission_statuses=0
+IN logged_completion_elapsed_us=29613..30377
+IN same_index_completion_interval_ms=29.619300..30.383000
+IN submission_margin_start_minus_current_plus_one=28:20044
+IN submissions_with_nonpositive_margin=0 signed_margin_below_10=0
+OUT completions=20044 index_counts=2:20044
+OUT submissions=20044 index_counts=2:20044
+OUT failed_completion_statuses=0 failed_submission_statuses=0
+OUT logged_completion_elapsed_us=6..284
+OUT same_index_completion_interval_ms=2.617600..3.392400
+OUT submission_margin_start_minus_current_plus_one=-53:20044
+OUT submissions_with_nonpositive_margin=20044 signed_margin_below_10=20044
+WARNING: OUT StartFrame is behind CurrentFrame; successful status and absence of driver margin warnings do not establish timely transfer.
+Consecutive same-direction completion-entry events=0
+This metric is not proof of an overwritten pending entry: completion-entry logging precedes the pairing lock.
+Engine pairs=20044 unequal_IN_OUT_indices=18040 output_index_counts=2:20044
+Render-prepare events=20044
+Render-prepare previous_URB_transfer_bytes=0:20044
+Per-second completion windows (trace-relative; first/last can be partial):
+second=0 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=1 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=2 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=3 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=4 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=5 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=6 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=7 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=8 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=9 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=10 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=11 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=12 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=13 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=14 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=15 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=16 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=17 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=18 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=19 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=20 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=21 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=22 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=23 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=24 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=25 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=26 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=27 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=28 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=29 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=30 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=31 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=32 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=33 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=34 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=35 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=36 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=37 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=38 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=39 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=40 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=41 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=42 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=43 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=44 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=45 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=46 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=47 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=48 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=49 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=50 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=51 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=52 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=53 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=54 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=55 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=56 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=57 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=58 IN_count=333 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=333 OUT_indices=2
+second=59 IN_count=334 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=334 OUT_indices=2
+second=60 IN_count=44 IN_indices=0;1;2;3;4;5;6;7;8;9 OUT_count=44 OUT_indices=2
+Warning/error/margin observations=60132
+Event 0x47 at_ms=1.224000 payload=49-06-00-00-00-1A-00-00-00
+Event 0x47 at_ms=1.248100 payload=4F-02-00-00-00-FE-F8-01-00
+Event 0x48 at_ms=1.248200 payload=4F-02-00-00-00-33-00-00-00-98-2F-A2-3F-CB-2F-A2-3F
+Event 0x47 at_ms=4.394600 payload=49-07-00-00-00-1A-00-00-00
+Event 0x47 at_ms=4.420900 payload=4F-02-00-00-00-FF-F8-01-00
+Event 0x48 at_ms=4.421200 payload=4F-02-00-00-00-33-00-00-00-9B-2F-A2-3F-CE-2F-A2-3F
+Event 0x47 at_ms=7.213700 payload=49-08-00-00-00-1A-00-00-00
+Event 0x47 at_ms=7.234300 payload=4F-02-00-00-00-00-F9-01-00
+Event 0x48 at_ms=7.234400 payload=4F-02-00-00-00-33-00-00-00-9E-2F-A2-3F-D1-2F-A2-3F
+Event 0x47 at_ms=10.212500 payload=49-09-00-00-00-1A-00-00-00
+Event 0x47 at_ms=10.232900 payload=4F-02-00-00-00-01-F9-01-00
+Event 0x48 at_ms=10.233000 payload=4F-02-00-00-00-33-00-00-00-A1-2F-A2-3F-D4-2F-A2-3F
+Event 0x47 at_ms=13.215400 payload=49-00-00-00-00-1A-00-00-00
+Event 0x47 at_ms=13.239900 payload=4F-02-00-00-00-02-F9-01-00
+Event 0x48 at_ms=13.240000 payload=4F-02-00-00-00-33-00-00-00-A4-2F-A2-3F-D7-2F-A2-3F
+Event 0x47 at_ms=16.222000 payload=49-01-00-00-00-1A-00-00-00
+Event 0x47 at_ms=16.250900 payload=4F-02-00-00-00-03-F9-01-00
+Event 0x48 at_ms=16.251200 payload=4F-02-00-00-00-33-00-00-00-A7-2F-A2-3F-DA-2F-A2-3F
+Event 0x47 at_ms=19.387500 payload=49-02-00-00-00-1A-00-00-00
+Event 0x47 at_ms=19.409100 payload=4F-02-00-00-00-04-F9-01-00
+Event 0x48 at_ms=19.409200 payload=4F-02-00-00-00-33-00-00-00-AA-2F-A2-3F-DD-2F-A2-3F
+Event 0x47 at_ms=22.221500 payload=49-03-00-00-00-1A-00-00-00
+Event 0x47 at_ms=22.245600 payload=4F-02-00-00-00-05-F9-01-00
+Event 0x48 at_ms=22.245800 payload=4F-02-00-00-00-33-00-00-00-AD-2F-A2-3F-E0-2F-A2-3F
+Event 0x47 at_ms=25.222700 payload=49-04-00-00-00-1A-00-00-00
+Event 0x47 at_ms=25.248400 payload=4F-02-00-00-00-06-F9-01-00
+Event 0x48 at_ms=25.248500 payload=4F-02-00-00-00-33-00-00-00-B0-2F-A2-3F-E3-2F-A2-3F
+Event 0x47 at_ms=28.224700 payload=49-05-00-00-00-1A-00-00-00
+Event 0x47 at_ms=28.251700 payload=4F-02-00-00-00-07-F9-01-00
+Event 0x48 at_ms=28.251900 payload=4F-02-00-00-00-33-00-00-00-B3-2F-A2-3F-E6-2F-A2-3F
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x3d=40088
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x3e=20044
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x41=20044
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x47=40088
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x48=20044
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x49=20044
+Count 0b8e02e8-5b01-3a7d-d401-5531a6a8bdde/0x55=40088
+Count ba5912e4-a67b-3b96-db60-afe06000d08c/0x1d=20044
+Count ba5912e4-a67b-3b96-db60-afe06000d08c/0x21=20044
+No PCM payload or kernel-memory dump. This interval does not establish the original fault trigger.
+

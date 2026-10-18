@@ -1,0 +1,3 @@
+﻿trigger H1 start 01:18:19 for 20 min
+wsl pid 51112
+dd procs running: 0

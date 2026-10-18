@@ -1,0 +1,10 @@
+# Generated trace artifacts — large and environment-specific. Publish these as release
+# assets instead of committing them.
+*.etl
+*.xml
+*.zip
+*.7z
+
+# Local scratch
+*.tmp
+*.out
