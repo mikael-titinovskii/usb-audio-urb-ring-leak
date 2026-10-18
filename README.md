@@ -211,17 +211,7 @@ Installed as a logon task running elevated and hidden (`tools/install-pool-watch
 decision is appended to `watchdog.log` plus a CSV history, so long-run degradation is measurable.
 The shipped log spans two revisions of the script (the first line predates the `maxcycles` field).
 
-## 7. What this is not
-
-This is a mitigation, not a correction of the defect. The defect is in the driver's pairing and
-resubmission logic. A correction requires, in that logic:
-
-1. Guarantee a resubmission after every output completion, on every path.
-2. Pair strictly by descriptor identity rather than by arrival order, or recover deterministically
-   when the input/output index alignment slips.
-3. Make the scheduling-margin check signed so a behind-time request is actually reported.
-
-## 8. Repository layout
+## 7. Repository layout
 
 ```
 README.md
@@ -297,50 +287,21 @@ Environment-specific values are parameters, not edits:
   `Capture-FocusriteCounters.ps1`, `Test-UsbPoolModel.ps1`, `AnalyzeLoopbackPcm.cs`) are marked as
   such where they are mentioned.
 
-## 9. Provenance, limits and notes on the data
+## 8. About the data
 
-- **One record is not a raw artifact.** `evidence/negative-evidence-no-windows-events.txt` is a
-  written statement that the two capture windows produced no Windows audio or PnP event, since an
-  empty file carries no information. Everything else is an artifact of a capture or of a scripted
-  reduction: `onset-window-events.csv` and `collapsed-state-events.csv` are extracted raw event
-  rows; the `*-aggregate.txt` files are analyzer reports; `pool-timeline-onset-capture.txt` is a
-  per-second reduction produced by `tools/queue-timeline.py`.
-- **The three key binary traces are published** as release assets of `traces-2026-10-10`: the onset
-  capture, the post-restart healthy capture and the collapsed-state capture. They are unredacted, so
-  they contain local paths and process names from the recording machine. The older captures remain
-  local and can be provided.
-  `evidence/raw-captures-available-on-request.md` lists every capture with its window, size and
-  contents, with direct links for the published ones.
-- **One column is unpopulated.** In `evidence/onset-capture-samples.csv` the `default_peak` column is
-  empty in every row (that sampler step was not implemented); the file's useful content is the
-  timestamp, audio-host process identity, CPU time and device status.
-- **The transfer-flags export was not retained.** The earlier pass produced a `-flags` CSV claim,
-  but the file retained here is identical to its non-flags sibling and contains no flag field, so no
-  transfer-flag claim is made. `TransferFlags=0` (ASAP not set) is quoted from the driver's own
-  queue events instead.
-- **Detection requires an open stream.** With no application holding the playback endpoint the ring
-  is not measurable and no assessment is made. Worst case for a fault that begins with silence is
-  one polling interval (30 s while a stream is open, 60 s otherwise) plus the ~8 s device restart.
-- **What can be recomputed.** The three published traces cover every figure in sections 4 and 5, so
-  the onset, the healthy ring and the collapsed state can be re-derived from the raw captures.
-  Figures taken from the earlier passes are backed by the analyzer reports under `docs/`, whose
-  source traces remain local. A ~7.9 GB intermediate XML export was deleted after analysis and can
-  be regenerated from the retained trace if it is ever wanted.
-- Recorded audio was deliberately excluded.
-- Personal identifiers were redacted in file contents: user paths appear as `C:\Users\<user>` and
-  the device serial as `<serial>`. Driver module names, provider control GUIDs, hashes and the
-  VID:PID are retained because they are the identifiers needed to locate the defect. The two
-  `deadbeef`/`feedfacebeef` control GUIDs read as magic values but are the driver's own. Commit
-  metadata carries the publishing account, which is inherent to how the repository is hosted.
-- Timestamps are local time (UTC+03:00).
+Everything here comes from one machine at one moment. A few notes on what the files are.
 
-## 10. Limitations
-
-- **Liability** — none accepted. This material is published for information only. No responsibility
-  is taken for any loss, damage or consequence arising from its use, from any measurement or script
-  in it, or from acting on its conclusions.
-- **Warranty** — none given. Everything here is provided "as is", without warranty of any kind,
-  express or implied, including but not limited to the implied warranties of merchantability,
-  fitness for a particular purpose and non-infringement. The measurements describe one machine at
-  one point in time and are not a specification; see section 9 for what can and cannot be
-  re-derived from this repository.
+- One file is a written statement, not a capture: `negative-evidence-no-windows-events.txt` records
+  that the two windows produced no Windows audio or PnP event. Everything else is raw event rows, an
+  analyzer report, or a scripted reduction.
+- The three main traces are published as release assets and are unredacted, so they carry local
+  paths and process names from this machine. Older captures stay local and can be provided.
+- The `default_peak` column of `onset-capture-samples.csv` is empty throughout; that sampler step was
+  never implemented. The useful columns are timestamp, audio-host process, CPU time and device state.
+- No transfer-flag claim is made: the retained export has no flag field.
+- Detection needs an open playback stream. With nothing holding the endpoint the ring cannot be
+  measured, so no assessment is made.
+- Every figure in sections 4 and 5 can be recomputed from the published traces. Earlier figures are
+  backed by the analyzer reports in `docs/`; their source traces remain local.
+- Recorded audio was deliberately excluded. User paths appear as `C:\Users\<user>`, the device serial
+  as `<serial>`, and timestamps are local time (UTC+03:00).
