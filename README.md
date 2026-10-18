@@ -30,7 +30,7 @@ Full machine-readable record: `evidence/environment.txt` (read-only queries at c
 | Interface | VID:PID `1235:8218`; interface class reported as `USB\Class_01&SubClass_00&Prot_20` (audio control, protocol 2.0); 4 record / 2 playback channels |
 | Driver module under test | `FocusriteUsb.sys` 4.150.0.432 — SHA256 `498F4644C737C829FDD8853F9BE79A4FBF65C812B623818DF611587779135B80` |
 | Companion modules | `FocusriteUsbAudio.sys`, `FocusriteUsbSwRoot.sys`, `FocusriteUsbAsio.dll` (versions and hashes in `evidence/environment.txt`) |
-| OS | Windows 10.0.26200, 64-bit |
+| OS | Windows 11 25H2, build 26200 (reports NT version 10.0), 64-bit |
 | Stream settings | 48 kHz, 128-sample buffer, Safe Mode on, clock source USB Internal (synced). Reported by the interface control application; its settings screenshot is not retained here |
 | Transport | Interface on a CPU-attached xHCI root port, not a hub (parent chain in `evidence/environment.txt`) |
 

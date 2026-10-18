@@ -3,7 +3,8 @@ Captured: 2026-10-10 15:18:46 local time (UTC+03:00)
 Method: read-only queries (PnP, registry, file metadata). No capture, no device restart, no settings change.
 
 == Operating system ==
-Version   : 10.0.26200  (build 26200)
+Product   : Windows 11 Home Single Language, version 25H2
+Version   : 10.0.26200  (build 26200; NT version string, which reads 10.0 on Windows 11 too)
 Arch      : 64-bit
 
 == Interface ==
